@@ -1,0 +1,8 @@
+<p>Descrição: {{tarefa.desc}}</p>
+<!--Se o objeto Responsavel for diferente de nulo, entao tarefa.responsavel.nome = 'vazio'-->
+<p>Responsável: {{tarefa.responsavel !== null ? tarefa.responsavel.nome: ''}}</p>
+<!--Quando coloca dps de uma variavel ou objeto que pode ter valor
+  nulo, ele faz um lógica parecida com a de cima: é diferente de nulo?
+se sim ele consegue chamar o proximo nome, se for nulo, não faz nada. -->
+<!--ou seja verifica se é nulo ou nao-->
+<p>Responsável: {{tarefa.responsavel?.usuario?.nome}}</p>

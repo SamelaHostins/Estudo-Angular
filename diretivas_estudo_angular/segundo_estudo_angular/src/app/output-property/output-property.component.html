@@ -1,0 +1,10 @@
+<!--Aula 14 da Loiane do Angular Emitindo Evento com Output
+   Properties-->
+<div>
+  <button class="btn btn-primary" (click)="decrementa()">-</button>
+  <!-- readonly nao deixa o usuario editar este conteudo
+  variavel local para afzer algum elemento html, só colocar #
+  e dar um nome a ela. Ex: #campoInput-->
+  <input type="text" [value]= "valor" readonly #campoInput>
+  <button class="btn btn-primary" (click)="incrementa()">+</button>
+</div>

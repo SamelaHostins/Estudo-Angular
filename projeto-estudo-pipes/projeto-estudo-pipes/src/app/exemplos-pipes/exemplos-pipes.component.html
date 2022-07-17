@@ -1,0 +1,42 @@
+<h3>Exemplo de Pipes</h3>
+
+<!--pipe que coloca todo o titulo em letras maiusculas-->
+<p>Titulo: {{livro.titulo | uppercase  | camelCase}} </p>
+
+<!--pipe que define que o numero da decimal terá no minimo
+  uma casa decimal e no máximo duas-->
+<p>Estrelas: {{livro.rating | number:'2.1-2'}} </p>
+
+<p>Páginas: {{livro.paginas}} </p>
+
+<!--Pipe que mostra a moeda, pode ter argumento da moeda,
+  ex pedi para mostrar em reais, se quiser que mostre
+  somente qual é a moeda, basta por um false, true vai
+  automatico o símbolo  -->
+<p>Preço: {{ livro.preco | currency: 'BRL'}} </p>
+
+<!--Pipe que mostra de um jeito melhor a data, você pode
+formatar, para formatar do jeito qwue você quiser só ler
+na documentação -->
+<p>Data Lançamento: {{ livro.dataLancamento | date: 'dd-MM-yyyy'}} </p>
+<p>Url: {{ livro.url }} </p>
+<br>
+<p>
+  <!--Pipe que formata o objeto de js para json-->
+  Livro: {{livro | json}}
+</p>
+<br>
+
+<h5>Filtro em um Array</h5>
+<br>
+<input type="text" [(ngModel)]= "filtro">
+<br>
+<input type="text" #novoValor>
+<button (click)= "addCurso(novoValor.value)">Add Curso</button>
+<ul>
+  <li *ngFor= "let liv of obterCursos() ">{{liv}}</li>
+</ul>
+<br>
+
+<h3>Valor Async</h3>
+<p>{{ valorAsync | async}}</p>

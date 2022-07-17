@@ -1,0 +1,22 @@
+<div class="row">
+  <!-- "s" de small, "m" para tela media, "l" para desktop -->
+  <div class="col s6">
+
+    <h5>Lista de Alunos</h5>
+
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+          aria-expanded="false" aria-controls="collapseOne" *ngFor= "let aluno of alunos" [routerLink]= "[aluno.id]" routerLinkActive="router-link-active" >
+            {{aluno.nome}}
+          </button>
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s6">
+    <router-outlet></router-outlet>
+  </div>
+</div>

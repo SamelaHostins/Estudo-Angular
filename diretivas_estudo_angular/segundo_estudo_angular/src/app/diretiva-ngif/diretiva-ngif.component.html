@@ -1,0 +1,37 @@
+<h5>*ngIf</h5>
+
+<!--se exitir elementos em curso então aparece o titulo-->
+<div *ngIf= "cursos.length > 0">
+  Lista de Cursos
+</div>
+<!--se elementos de curso for igual a zero aparece o titulo-->
+<div *ngIf= "cursos.length === 0">
+  Nao exitem cursos para serem listados
+</div>
+
+<br>
+<!--se exitir elementos em curso então aparece o titulo-->
+<div *ngIf= "mostrarCursos">
+  Lista de Cursos
+</div>
+<!--se elementos de curso for igual a zero aparece o titulo
+O "!" nega a variavel "mostrarCursos"-->
+<div *ngIf= "!mostrarCursos">
+  Nao exitem cursos para serem listados
+</div>
+
+<br>
+<!--Se apertar aparece os cursos, se apertar novamente não mostra"-->
+<button (click)= "onMostrarCursos()">Mostrar Ou Esconder Cursos</button>
+
+<br><br>
+<!--Hidden é uma alternativa:"-->
+<h3>Hidden</h3>
+<!--quero mostrar-->
+<div [hidden]= "!mostrarCursos">
+  Lista de Cursos
+</div>
+<!--nao quero mostrar"-->
+<div [hidden]= "mostrarCursos">
+  Nao exitem cursos para serem listados
+</div>

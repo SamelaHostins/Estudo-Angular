@@ -1,0 +1,12 @@
+<nav class="navbar navbar-dark bg-dark">
+  <div class="nav navbar-nav">
+          <a class="nav-item nav-link" [class.active]= "aba === 'home'" (click) = "aba = 'home'">Home</a>
+          <a class="nav-item nav-link" [class.active]= "aba === 'localizacao'" (click) = "aba = 'localizacao'">Localização</a>
+          <a class="nav-item nav-link" [class.active]= "aba === 'curiosidades'" (click) = "aba = 'curiosidades'">Curiosidades</a>
+  </div>
+</nav>
+<div class="container" [ngSwitch]= "aba">
+<p *ngSwitchCase= "'localizacao'"> Modo localização ativado</p>
+<p *ngSwitchCase= "'curiosidades'"> Modo Curiosidade ativado</p>
+<p *ngSwitchDefault>home</p>
+</div>

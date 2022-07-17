@@ -1,0 +1,26 @@
+<p appFundoAmarelo >
+  Texto com Fundo Amarelo
+</p>
+
+<button appFundoAmarelo>Botao com fundo amarelo</button>
+<br>
+<!--O angular sabe que está chamando o selector e estabelecendo
+como nome externo do input, isso diminui o código-->
+<p [appVersaoCompleta]="'red'" [defaultColor]="'grey'" >
+  Texto com highlight com cores costumizadas
+</p>
+
+<!--se exitir elementos em curso então aparece o titulo-->
+<div *ngIf= "mostrarCursos">
+  Lista de Cursos
+</div>
+<!--se elementos de curso for igual a zero aparece o titulo
+O "!" nega a variavel "mostrarCursos"-->
+<div *ngIf= "!mostrarCursos">
+  Nao exitem cursos para serem listados
+</div>
+
+<br>
+<!--Se apertar aparece os cursos, se apertar novamente não mostra"-->
+<button (click)= "onMostrarCursos()"
+>Mostrar Ou Esconder Cursos</button>
